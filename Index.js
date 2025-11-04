@@ -122,6 +122,7 @@ class Screen {
 
   clean() {
       this.MainScreen.innerHTML = '';
+  }
 }
 
 let lipsyncssongs = [];
