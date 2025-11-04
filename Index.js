@@ -1682,8 +1682,61 @@ const challengeTypes = [
 
 // CAST SELECTOR PHASE
 function showCastSelector() {
-        {
-          console.error(`   ❌ ERROR: ${queen.name} has ${queen.trackrecord.length} entries but only ${CurrentSeason.episodes.length} episodes!`);
+  const screen = new Screen();
+  screen.clean();
+
+  const container = document.querySelector('.MainArea');
+
+  const title = document.createElement('h1');
+  title.className = 'phase-title';
+  title.textContent = 'SELECT YOUR CAST';
+  container.appendChild(title);
+
+  const subtitle = document.createElement('p');
+  subtitle.style.textAlign = 'center';
+  subtitle.style.fontSize = '1.2rem';
+  subtitle.style.marginBottom = '20px';
+  subtitle.textContent = `Select ${pokemonQueens.length} queens for the competition`;
+  container.appendChild(subtitle);
+
+  const castGrid = document.createElement('div');
+  castGrid.className = 'cast-selector';
+
+  pokemonQueens.forEach((queen, index) => {
+    const card = document.createElement('div');
+    card.className = 'queen-card selected';
+    card.dataset.index = index;
+
+    const img = document.createElement('img');
+    img.src = queen.image;
+    img.alt = queen.name;
+    img.onerror = function() {
+      this.src = 'https://via.placeholder.com/150/667eea/ffffff?text=' + queen.name;
+    };
+
+    const name = document.createElement('div');
+    name.className = 'queen-name';
+    name.textContent = queen.name;
+
+    card.appendChild(img);
+    card.appendChild(name);
+
+    card.addEventListener('click', () => {
+      card.classList.toggle('selected');
+    });
+
+    castGrid.appendChild(card);
+  });
+
+  container.appendChild(castGrid);
+
+  selectedQueens = [...pokemonQueens];
+}
+
+// ENTRANCES PHASE
+let entranceIndex = 0;
+
+function showEntrances() {
           console.error(`   This would create ${queen.trackrecord.length - CurrentSeason.episodes.length} duplicate column(s)!`);
           console.error(`   TRIMMING to correct length...`);
           queen.trackrecord = queen.trackrecord.slice(0, CurrentSeason.episodes.length);
