@@ -1601,12 +1601,87 @@ const pokemonQueens = [
     "Pokemon", false),
 
   new Queen("Lopunny", 7, 8, 7, 9, 7, 8, 7, 8, 8, 9, 4,
-    {
-      let queen = CurrentSeason.currentCast[q];
-      if(queen.trackrecord)
-      {
-        console.log(`   ${queen.name}: track record length ${queen.trackrecord.length}, episodes ${CurrentSeason.episodes.length}`);
-        if(queen.trackrecord.length > CurrentSeason.episodes.length)
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/428.png",
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/428.png",
+    "Pokemon", false),
+
+  new Queen("Milotic", 8, 6, 5, 7, 6, 10, 7, 9, 9, 9, 3,
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/350.png",
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/350.png",
+    "Pokemon", false),
+
+  new Queen("Primarina", 8, 7, 6, 8, 7, 8, 9, 8, 9, 8, 4,
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/730.png",
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/730.png",
+    "Pokemon", false),
+
+  new Queen("Tsareena", 6, 7, 6, 9, 5, 8, 6, 7, 7, 6, 7,
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/763.png",
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/763.png",
+    "Pokemon", false),
+
+  new Queen("Salazzle", 7, 8, 8, 7, 6, 7, 7, 7, 8, 5, 8,
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/758.png",
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/758.png",
+    "Pokemon", false),
+
+  new Queen("Vespiquen", 6, 6, 5, 6, 7, 7, 6, 8, 7, 7, 6,
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/416.png",
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/416.png",
+    "Pokemon", false),
+
+  new Queen("Nidoqueen", 7, 7, 6, 7, 6, 7, 7, 6, 7, 7, 6,
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/31.png",
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/31.png",
+    "Pokemon", false),
+
+  new Queen("Jynx", 9, 8, 8, 8, 5, 7, 8, 7, 8, 6, 7,
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/124.png",
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/124.png",
+    "Pokemon", false),
+
+  new Queen("Florges", 7, 6, 5, 6, 8, 9, 6, 8, 8, 9, 3,
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/671.png",
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/671.png",
+    "Pokemon", false),
+
+  new Queen("Mismagius", 8, 8, 7, 7, 6, 8, 7, 7, 8, 6, 7,
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/429.png",
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/429.png",
+    "Pokemon", false),
+
+  new Queen("Froslass", 7, 7, 6, 8, 7, 8, 7, 7, 7, 6, 5,
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/478.png",
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/478.png",
+    "Pokemon", false)
+];
+
+//#endregion
+//#region Simulator State
+
+let currentPhase = 'CAST_SELECTOR';
+let selectedQueens = [];
+let currentEpisodeNum = 1;
+let episodeResults = [];
+let currentChallengeType = null;
+
+// Episode placements will follow: 1 WIN, 2 HIGH, remaining SAFE except 1 LOW and 2 BTM2
+const challengeTypes = [
+  { type: 'Acting Challenge', description: 'Show us your best acting skills in this dramatic scene!' },
+  { type: 'Design Challenge', description: 'Create a stunning look from unconventional materials!' },
+  { type: 'Snatch Game', description: 'Impersonate a celebrity and make us laugh!' },
+  { type: 'Rusical', description: 'Sing and dance in our original musical production!' },
+  { type: 'Stand-Up Comedy', description: 'Write and perform your own stand-up routine!' },
+  { type: 'Ball Challenge', description: 'Serve three runway looks for the ultimate ball!' },
+  { type: 'Improv Challenge', description: 'Think on your feet in this improv comedy challenge!' },
+  { type: 'Makeover Challenge', description: 'Transform your partner into a glamazon!' }
+];
+
+//#endregion
+//#region Phase Functions
+
+// CAST SELECTOR PHASE
+function showCastSelector() {
         {
           console.error(`   ❌ ERROR: ${queen.name} has ${queen.trackrecord.length} entries but only ${CurrentSeason.episodes.length} episodes!`);
           console.error(`   This would create ${queen.trackrecord.length - CurrentSeason.episodes.length} duplicate column(s)!`);
