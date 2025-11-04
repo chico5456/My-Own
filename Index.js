@@ -1596,62 +1596,62 @@ const pokemonQueens = [
   new Queen("Gardevoir", 9, 8, 7, 8, 6, 9, 8, 8, 9, 8, 5,
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/282.png",
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/282.png",
-    "Pokemon", false),
+    "Pokemon", true),
 
   new Queen("Lopunny", 7, 8, 7, 9, 7, 8, 7, 8, 8, 9, 4,
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/428.png",
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/428.png",
-    "Pokemon", false),
+    "Pokemon", true),
 
   new Queen("Milotic", 8, 6, 5, 7, 6, 10, 7, 9, 9, 9, 3,
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/350.png",
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/350.png",
-    "Pokemon", false),
+    "Pokemon", true),
 
   new Queen("Primarina", 8, 7, 6, 8, 7, 8, 9, 8, 9, 8, 4,
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/730.png",
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/730.png",
-    "Pokemon", false),
+    "Pokemon", true),
 
   new Queen("Tsareena", 6, 7, 6, 9, 5, 8, 6, 7, 7, 6, 7,
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/763.png",
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/763.png",
-    "Pokemon", false),
+    "Pokemon", true),
 
   new Queen("Salazzle", 7, 8, 8, 7, 6, 7, 7, 7, 8, 5, 8,
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/758.png",
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/758.png",
-    "Pokemon", false),
+    "Pokemon", true),
 
   new Queen("Vespiquen", 6, 6, 5, 6, 7, 7, 6, 8, 7, 7, 6,
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/416.png",
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/416.png",
-    "Pokemon", false),
+    "Pokemon", true),
 
   new Queen("Nidoqueen", 7, 7, 6, 7, 6, 7, 7, 6, 7, 7, 6,
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/31.png",
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/31.png",
-    "Pokemon", false),
+    "Pokemon", true),
 
   new Queen("Jynx", 9, 8, 8, 8, 5, 7, 8, 7, 8, 6, 7,
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/124.png",
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/124.png",
-    "Pokemon", false),
+    "Pokemon", true),
 
   new Queen("Florges", 7, 6, 5, 6, 8, 9, 6, 8, 8, 9, 3,
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/671.png",
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/671.png",
-    "Pokemon", false),
+    "Pokemon", true),
 
   new Queen("Mismagius", 8, 8, 7, 7, 6, 8, 7, 7, 8, 6, 7,
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/429.png",
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/429.png",
-    "Pokemon", false),
+    "Pokemon", true),
 
   new Queen("Froslass", 7, 7, 6, 8, 7, 8, 7, 7, 7, 6, 5,
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/478.png",
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/478.png",
-    "Pokemon", false)
+    "Pokemon", true)
 ];
 
 //#endregion
