@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Drag Race Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <h1 class="main-title">POKÉMON'S</h1>
+            <h2 class="sub-title">DRAG RACE</h2>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="MainArea">
+            <!-- Dynamic content will be loaded here -->
+        </div>
+    </div>
+
+    <div class="bottom-controls">
+        <button id="nextBtn" class="action-btn">NEXT</button>
+    </div>
+
+    <!-- Modal for Production Rigging -->
+    <div id="riggingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>PRODUCTION RIGGING</h2>
+            <p class="modal-subtitle">Change the placements if you want to rig the competition!</p>
+            <div id="riggingControls"></div>
+            <button id="applyRigging" class="action-btn">APPLY CHANGES</button>
+        </div>
+    </div>
+
+    <script src="Index.js"></script>
+</body>
+</html>
