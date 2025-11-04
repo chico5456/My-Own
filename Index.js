@@ -1543,8 +1543,6 @@ class Queen {
   }
 }
 
-let lipsyncssongs = [];
-
 //#endregion
 //#region Helper Functions
 
