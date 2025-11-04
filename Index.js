@@ -123,7 +123,6 @@ class Screen {
   clean() {
       this.MainScreen.innerHTML = '';
   }
-}
 
 let lipsyncssongs = [];
 
@@ -970,42 +969,6 @@ class Queen {
     this.MainScreen.append(br);
   }
 
-  applyTrackRecordPlacementStyle(cell, placement) {
-    let trimmed = placement.toString().trim();
-    cell.innerHTML = trimmed;
-
-    switch(trimmed) {
-      case 'WIN':
-        cell.style.background = '#FFD700';
-        cell.style.color = '#000';
-        break;
-      case 'HIGH':
-        cell.style.background = '#90EE90';
-        cell.style.color = '#000';
-        break;
-      case 'SAFE':
-        cell.style.background = '#87CEEB';
-        cell.style.color = '#000';
-        break;
-      case 'LOW':
-        cell.style.background = '#FFA500';
-        cell.style.color = '#000';
-        break;
-      case 'BTM2':
-        cell.style.background = '#FF6347';
-        cell.style.color = '#fff';
-        break;
-      case 'ELIM':
-        cell.style.background = '#000';
-        cell.style.color = '#fff';
-        break;
-      default:
-        cell.style.background = 'transparent';
-    }
-
-    return trimmed;
-  }
-
   createPromoTable(){
 
       if(CurrentSeason.episodes.length == 0)
@@ -1578,6 +1541,7 @@ class Queen {
       }
     }
   }
+}
 }
 
 //#endregion
